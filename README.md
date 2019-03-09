@@ -1,3 +1,5 @@
+
+```
 Candidate Name:           Vipin Kumar
 Location:                 Paris
 Contact Point:            Farhana Mohammed
@@ -23,7 +25,7 @@ output: 'json' with JSON knapsack object
 GET 'http://localhost:6543/knapsack/<id>'
 output: 'json' with JSON knapsack object
 
-```json
+
 # problem specification
 {
     "problem": {
@@ -48,12 +50,11 @@ output: 'json' with JSON knapsack object
         "total_value": # sum of value of packed_items
     }
 }
+```
+**Solution:**
 
-Solution:
-
-How to run containerized solution (Ubuntu 18.04 container):
-***********
-
+**How to run containerized solution (Ubuntu 18.04 container):**
+```
 Clone the repo on your machine:
     git clone git@github.com:vkumarvs/knapsackapi.git
 
@@ -62,17 +63,18 @@ Build the container image :
 
 Run the service:
     docker container run -it -p 6543:6543 --name knapsack my-knapsack
-
-Testing:
+```
+**Testing:**
+```
     Please make sure you have python 3 installed to run the test cases.
     Go into the cloned repo directory and run the below command.
         pytest test_knapsack.py
-    test_knapsack.py has test cases taken from
-    "https://developers.google.com/optimization/bin/knapsack" to verify the
-    implemented solution.
+    test_knapsack.py has test cases and a few of the problem statement are taken from
+    "https://developers.google.com/optimization/bin/knapsack" to verify the implemented solution.
+```
+**How to compile code from source:**
 
-How to compile code from source:
-*******************************
+```
 This code depends on Google Optimization Tools c++ library.
 For further instruction how to install it on your desired platform please refer
 to https://developers.google.com/optimization/install/cpp/linux
@@ -90,16 +92,17 @@ platform.
     Execute compile.sh
     Before running your compiled solution, make sure you have set LD_LIBRARY_PATH to <repo directory>/lib
     Execute ./maerskApi
+```
 
-
-Design:
-
+**Design:**
+```
 This API execute the knapsack jobs asynchronously. The reason behind to choose
 C++ to implement the API is mostly performance.
 I choose C++ as API backened and Python as a test framework to test the API.
+```
 
-
-Limitation:
+**Limitation:**
+```
 This code has a hardcoded limit of running 50k jobs concurrently. This limit
 comes from the time limit provided to implement the solution (One Day).
 
@@ -110,6 +113,7 @@ The distribution of the load between multiple containers needs to be taken care
 of.
 The collection of API performance and other metrices needs to be implemented.
 Graceful job removal and API shutdown needs to be implemented.
+```
 
 
 
