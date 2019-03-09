@@ -1,7 +1,6 @@
 
 ```
 Candidate Name:           Vipin Kumar
-Location:                 Paris
 Contact Point:            Farhana Mohammed
 
 # Knapsack Optimizer Service
