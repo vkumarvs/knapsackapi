@@ -1,8 +1,5 @@
 
 ```
-Candidate Name:           Vipin Kumar
-Contact Point:            Farhana Mohammed
-
 # Knapsack Optimizer Service
 
 Solution Structure
@@ -65,7 +62,7 @@ Run the service:
 ```
 **Testing:**
 ```
-    Please make sure you have python 3 installed to run the test cases.
+    Make sure you have python 3 installed to run the test cases.
     Go into the cloned repo directory and run the below command.
         pytest test_knapsack.py
     test_knapsack.py has test cases and a few of the problem statement are taken from
@@ -91,27 +88,6 @@ platform.
     Execute compile.sh
     Before running your compiled solution, make sure you have set LD_LIBRARY_PATH to <repo directory>/lib
     Execute ./maerskApi
-```
-
-**Design:**
-```
-This API execute the knapsack jobs asynchronously. The reason behind to choose
-C++ to implement the API is mostly performance.
-I choose C++ as API backened and Python as a test framework to test the API.
-```
-
-**Limitation:**
-```
-This code has a hardcoded limit of running 50k jobs concurrently. This limit
-comes from the time limit provided to implement the solution (One Day).
-
-To make this code production ready, one need to think about running the solution
-in multiple containers depending on the load requirements, Kubernates cluster can
-manage scaling up and down the containers.
-The distribution of the load between multiple containers needs to be taken care
-of.
-The collection of API performance and other metrices needs to be implemented.
-Graceful job removal and API shutdown needs to be implemented.
 ```
 
 
